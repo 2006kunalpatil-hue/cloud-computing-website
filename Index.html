@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Computing | My Web App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7ff;
+      color: #17233c;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #101d40;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h2 {
+      color: #71d4ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    nav a:hover {
+      color: #71d4ff;
+    }
+
+    .hero {
+      padding: 85px 20px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #132653, #1677cf);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #71d4ff;
+      color: #102044;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    section {
+      padding: 55px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #56647b;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px #14264a12;
+      border: 1px solid #e4eaf5;
+    }
+
+    .card .icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #1769aa;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: white;
+      text-align: center;
+    }
+
+    #message {
+      color: #1769aa;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #101d40;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 60px 18px;
+      }
+
+      section {
+        padding: 40px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>☁ CloudSphere</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Features</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Welcome to Cloud Computing</h1>
+      <p>
+        Discover how cloud technology makes applications,
+        storage and computing resources available over the internet.
+      </p>
+      <a href="#services" class="btn">Explore Features</a>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Cloud Computing Features</h2>
+      <p class="section-intro">
+        Cloud computing provides flexible, convenient and
+        scalable resources for modern applications.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🌐</div>
+          <h3>Internet Access</h3>
+          <p>Access your applications and services from anywhere with an internet connection.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">💾</div>
+          <h3>Cloud Storage</h3>
+          <p>Store files and information online without depending only on local storage.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📈</div>
+          <h3>Scalability</h3>
+          <p>Increase or decrease computing resources according to your needs.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔒</div>
+          <h3>Security</h3>
+          <p>Use access controls and security features to help protect your information.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About This Project</h2>
+      <p class="section-intro">
+        This is a simple cloud computing educational website created
+        using HTML, CSS and JavaScript for a cloud hosting practical.
+      </p>
+
+      <button class="btn" onclick="showMessage()">
+        Test My Web Application
+      </button>
+
+      <p id="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>CloudSphere | Practical No. 5</p>
+    <p>Created using HTML, CSS and JavaScript | Hosted with GitHub Pages</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent =
+        "Success! Your web application is running correctly.";
+    }
+  </script>
+</body>
+</html>
